@@ -17,6 +17,11 @@ p {
   font-size: 14px;
   line-height: 26px;
 }
+#portpic {
+  /* background: url("../images/headshot.jpg"); */
+	height: 91.6667%;
+	margin-top: 20px
+}
 a:hover,
 a:focus {
   color: #4676fa;
