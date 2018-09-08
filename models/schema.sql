@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS portfoliodb;
+CREATE DATABASE portfoliodb;
+
