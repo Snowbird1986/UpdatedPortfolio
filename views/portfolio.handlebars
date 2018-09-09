@@ -1,0 +1,44 @@
+<div id="home">
+  <div class="container col-md-10">
+    <div class="row">
+      <div class="col-md-12">
+        <section id="services" class="section">
+          <div class="container col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="wow fadeInDown" data-wow-delay="0.2s col-md-12 justify-content-left">
+                  <div class="col-md-12">
+                    <div class="col-md-6">
+                      <h1><i class="lnr lnr-pointer-right title">  Portfolio:</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+      </div>
+    </div>
+    <br>
+    <div class="row"  id="projects">
+        {{#unless project}}
+        <div><a href="/">No Projects Found. Try Again</a></div>
+        {{/unless}}
+        {{#if project}}
+            {{#each project}}
+                <div class="col-sm-6">
+                    <div class="media col-lg-12">
+                        {{!-- <div class="row"><h5>{{title}}</h5></div> --}}
+                        <div class="row">
+                            <a class="col-md-12" href="{{link}}">
+                            <img class="img img-thumbnail"  src="../images/{{img}}" alt="{{alt}}">
+                            </a>
+                            <h5 id="projectTitle" style="background-color:teal;color:whitesmoke; width:100%;margin-left:15px; margin-right:15px; text-align:center">{{title}}</h5>
+                            <br>
+                        </div> 
+                    </div>
+                </div>
+            {{/each}}
+        {{/if}}
+    </div>
+    </div>
+  </div>

@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   // Load example page and pass in an example by email
   app.get("/portfolio", function(req, res) {
-    db.User.findAll({}).then(function(
+    db.Project.findAll({}).then(function(
       dbProjects
     ) {
       // console.log(dbUser)
@@ -45,12 +45,22 @@ module.exports = function(app) {
     });
   });
   app.get("/login", function(req, res) {
-    db.User.findAll({}).then(function(
+    db.Login.findAll({}).then(function(
       dbLogin
     ) {
       console.log(dbLogin)
       res.render("login", {
         user: dbLogin
+      });
+    });
+  });
+  app.get("/newproject", function(req, res) {
+    db.Project.findAll({}).then(function(
+      dbProjects
+    ) {
+      console.log(dbProjects)
+      res.render("submission", {
+        project: dbProjects
       });
     });
   });
