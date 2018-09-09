@@ -31,6 +31,18 @@ body {
   color:royalblue;
   Font-size: 25px;
 }
+#projectTitle {
+  background-color:teal;
+  color:whitesmoke;
+  text-align: center;
+  width: 100%;
+  margin-left:15px;
+  margin-right:15px;
+}
+#projects {
+  padding-left:0px;
+  padding-right:0px
+}
 p {
   color: black;
 Font-size: 20px;
