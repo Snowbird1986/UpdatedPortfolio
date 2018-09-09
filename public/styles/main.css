@@ -43,6 +43,13 @@ body {
   padding-left:0px;
   padding-right:0px
 }
+.userDetails {
+  background-color:whitesmoke;
+  text-align:center;
+}
+.outline {
+  
+}
 p {
   color: black;
 Font-size: 20px;

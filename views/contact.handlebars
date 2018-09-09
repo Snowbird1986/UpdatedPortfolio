@@ -1,0 +1,54 @@
+<div id="home">
+    <div class="container col-md-10">
+        <div class="row">
+            <div class="col-md-12">
+                <section id="services" class="section">
+                    <div class="container col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="wow fadeInDown" data-wow-delay="0.2s col-md-12 justify-content-left">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                        <h1><i class="lnr lnr-pointer-right title">  Contact:</i></h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    <br>
+    <div class="row">
+        <form class="col-sm-6 outline">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Name:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="John Smith">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Email:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="example@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Write Something..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class="col-md-6 outline">
+            <br><br>
+            <p class="userDetails">If you think you have a job for me, please contact me via below contact information.</p>
+            <hr class="lines wow zoomIn userDetails" data-wow-delay="0.3s">
+            {{#forEach user}}
+              {{#isFirst}}
+                <h2 class="section-title wow fadeIn userDetails" data-wow-duration="1000ms" data-wow-delay="0.3s">Email: <a id="email" href="mailto:{{email}}">{{email}}</a></h2>
+                <hr class="lines wow zoomIn userDetails" data-wow-delay="0.3s">
+                <h2 class="section-title wow fadeIn userDetails" data-wow-duration="1000ms" data-wow-delay="0.3s">Mobile: <a id="phone" href="tel:{{phoneNumber}}">{{phoneNumber phoneNumber}}</a></h2>
+                <hr class="lines wow zoomIn userDetails" data-wow-delay="0.3s">
+              {{/isFirst}}
+            {{/forEach}}
+        </div>
+    </div>
+    </div>
+</div>
