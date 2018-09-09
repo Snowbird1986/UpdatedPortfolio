@@ -44,6 +44,16 @@ module.exports = function(app) {
       });
     });
   });
+  app.get("/login", function(req, res) {
+    db.User.findAll({}).then(function(
+      dbLogin
+    ) {
+      console.log(dbLogin)
+      res.render("login", {
+        user: dbLogin
+      });
+    });
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

@@ -35,12 +35,23 @@ module.exports = function(sequelize, DataTypes) {
     zip: {
       type: DataTypes.INTEGER,
       isNumeric: true
+    },
+    aboutMe: {
+      type: DataTypes.STRING,
+      isAlpha: true
     }
   });
   User.associate = function(models) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
     models.User.hasMany(models.Project, {
+      onDelete: "cascade"
+    });
+  };
+  User.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    models.User.hasOne(models.Login, {
       onDelete: "cascade"
     });
   };
