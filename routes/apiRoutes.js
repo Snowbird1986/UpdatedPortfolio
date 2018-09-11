@@ -16,35 +16,22 @@ module.exports = function(app) {
   //     res.json(dbUser);
   //   });
   // });
-  // app.post("/newres", function(req, res) {
-  //   // create takes an argument of an object describing the item we want to insert
-  //   // into our table. In this case we just we pass in an object with a text and
-  //   // complete property
-  //   db.User.create({
-  //     firstName: req.body.firstName,
-  //     lastName: req.body.lastName,
-  //     phoneNumber: req.body.phoneNumber,
-  //     email: req.body.email,
-  //     address: req.body.address,
-  //     city: req.body.city,
-  //     state: req.body.state,
-  //     zip: req.body.zip,
-  //     groupSize: req.body.groupSize,
-  //     preferedDate: req.body.preferedDate,
-  //     preferedTime: req.body.preferedTime,
-  //     TimeId: req.body.TimeId
-  //   }).then(function(dbUser) {
-  //     defaultUserID = dbUser.dataValues.id;
-  //     db.Reserves.create({
-  //       resDate: req.body.resDate,
-  //       resTime: req.body.resTime,
-  //       groupsize: req.body.groupSize,
-  //       UserId: defaultUserID
-  //     }).then(function(dbReserves) {
-  //       // We have access to the new todo as an argument inside of the callback function
-  //       res.json(dbReserves);
-  //     });
-  //   });
+  app.post("/newproj", function(req, res) {
+    // create takes an argument of an object describing the item we want to insert
+    // into our table. In this case we just we pass in an object with a text and
+    // complete property
+    db.Project.create({
+      projectName: req.body.projectName,
+      link: req.body.link,
+      alt: req.body.alt,
+      title: req.body.title,
+      img: req.body.img,
+      UserId: req.body.UserId
+    }).then(function(dbProject) {
+      // We have access to the new todo as an argument inside of the callback function
+      res.json(dbProject);
+    });
+  });
   //   // db.Reserves.create({
   //   //   resDate: req.body.resDate,
   //   //   resTime: req.body.resTime,
