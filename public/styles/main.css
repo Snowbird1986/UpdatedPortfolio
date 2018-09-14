@@ -25,11 +25,30 @@ body {
 }
 #wsu {
   color:goldenrod;
+  Font-size: 20px;
+}
+#wsu:hover {
+  color:darkgoldenrod;
   Font-size: 25px;
+  text-decoration: underline;
 }
 #ku {
   color:royalblue;
+  Font-size: 20px;
+}
+#ku:hover {
+  color:darkblue;
   Font-size: 25px;
+  text-decoration: underline;
+}
+#pnc {
+  color:darkorange;
+  Font-size: 20px;
+}
+#pnc:hover {
+  color:orangered;
+  Font-size: 25px;
+  text-decoration: underline;
 }
 #projectTitle {
   background-color:teal;
