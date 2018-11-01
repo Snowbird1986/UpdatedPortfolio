@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   // Load example page and pass in an example by email
   app.get("/portfolio", function(req, res) {
-    db.Project.findAll({}).then(function(
+    db.Project.findAll({order:[['id', 'DESC'],]}).then(function(
       dbProjects
     ) {
       // console.log(dbUser)
