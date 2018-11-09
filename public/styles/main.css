@@ -41,6 +41,15 @@ body {
   Font-size: 25px;
   text-decoration: underline;
 }
+#roome {
+  color:teal;
+  Font-size: 20px;
+}
+#roome:hover {
+  color:rgb(0, 102, 102);
+  Font-size: 25px;
+  text-decoration: underline;
+}
 #pnc {
   color:darkorange;
   Font-size: 20px;
